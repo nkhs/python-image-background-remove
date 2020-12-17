@@ -80,7 +80,7 @@ def check_image(saved_path):
     masked = (mask_stack * img) + ((1-mask_stack) * MASK_COLOR) # Blend
     masked = (masked * 255).astype('uint8')                     # Convert back to 8-bit 
 
-    cv2.imshow('img', masked)                                   # Display
+    # cv2.imshow('img', masked)                                   # Display
     img = Image.fromarray(masked, 'RGB')
     result_file = secure_filename('my.png')
     img.save(result_file)
